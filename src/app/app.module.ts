@@ -18,7 +18,8 @@ import { TrainsComponent } from './pages/trains/trains.component';
     SearchComponent,
     BookingsComponent,
     AdminComponent,
-    TrainsComponent 
+    TrainsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

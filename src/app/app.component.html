@@ -19,23 +19,34 @@
                         <a class="nav-link fw-semibold text-white  me-1" routerLink="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white  me-1" routerLink="/trains">Trains</a>
+                        <a style="cursor:pointer"class="nav-link fw-semibold text-white  me-1" routerLink="/trains">Trains</a>
                     </li>
                     <!-- cart -->
                     <li class="nav-item" *ngIf="!loggedUserData">
-                        <a  (click)="openLogin()" class="nav-link fw-semibold  text-white  me-1"  >Login</a>
+                        <a  style="cursor:pointer"(click)="openLogin()" class="nav-link fw-semibold  text-white  me-1"  >Login</a>
                     </li>
+
                     <li class="nav-item" *ngIf="!loggedUserData">
-                        <a (click)="openRegister()" class="nav-link fw-semibold  text-white  me-1"  >Register</a>
+                        <a style="cursor:pointer"(click)="openRegister()" class="nav-link fw-semibold  text-white  me-1"  >Register</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white  me-1" routerLink="/admin">Admin Login</a>
+                    </li>
+
+
+
+
+                    <li class="nav-item" *ngIf="loggedUserData">
+                        <a  style="cursor:pointer" class="nav-link fw-semibold  text-white  me-1"  routerLink="/bookings">My Bookings</a>
                     </li> 
                     <li class="nav-item" *ngIf="loggedUserData">
-                        <a   class="nav-link fw-semibold  text-white  me-1"  routerLink="/bookings">My Bookings</a>
+                        <a  style="cursor:pointer" class="nav-link fw-semibold  text-white  me-1"  >{{loggedUserData.phone}}</a>
                     </li> 
                     <li class="nav-item" *ngIf="loggedUserData">
-                        <a   class="nav-link fw-semibold  text-white  me-1"  >{{loggedUserData.phone}}</a>
-                    </li> 
-                    <li class="nav-item" *ngIf="loggedUserData">
-                        <a (click)="logoff()"  class="nav-link fw-semibold  text-white  me-1"  >Log Off</a>
+                        <a style="cursor:pointer"(click)="logoff()"  class="nav-link fw-semibold  text-white  me-1"  >Log Off</a>
                     </li> 
                 </ul>
             </div>
@@ -48,7 +59,7 @@
     <div class="modal-dialog">
       <div class="modal-content"> 
         <div class="modal-header">
-          <h4 class="modal-title">Regiter</h4>
+          <h4 class="modal-title">Register</h4>
           <button type="button" class="btn-close"  (click)="closeRegister()" data-bs-dismiss="modal"></button>
         </div> 
         <div class="modal-body">
@@ -75,7 +86,7 @@
             <div class="row"> 
                 <div class="col-6">
                     <label>Password</label>
-                    <input type="text" [(ngModel)]="registerObj.password" class="form-control" />
+                    <input type="password" [(ngModel)]="registerObj.password" class="form-control" />
                 </div>
             </div>
         </div> 
@@ -90,7 +101,7 @@
     <div class="modal-dialog">
       <div class="modal-content"> 
         <div class="modal-header">
-          <h4 class="modal-title">Regiter</h4>
+          <h4 class="modal-title">login</h4>
           <button type="button" class="btn-close"  (click)="closeLogin()" data-bs-dismiss="modal"></button>
         </div> 
         <div class="modal-body">
@@ -104,7 +115,7 @@
             <div class="row"> 
                 <div class="col-12">
                     <label>Password</label>
-                    <input type="text" [(ngModel)]="registerObj.password" class="form-control" />
+                    <input type="password" [(ngModel)]="registerObj.password" class="form-control" />
                 </div>
             </div>
         </div> 
@@ -112,6 +123,16 @@
           <button type="button" class="btn btn-danger"  (click)="closeLogin()">Close</button>
           <button type="button" class="btn btn-success" (click)="onLogin()" >Login</button>
         </div> 
+
+
+
+     
+
       </div>
     </div>
   </div>
+
+
+
+
+ 

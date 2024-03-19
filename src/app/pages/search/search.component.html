@@ -13,7 +13,7 @@
             </select>
         </div>
         <div class="col-2 px-2">
-            <input type="text" [(ngModel)]="searchObj.dateOfTravel" class="form-control" />
+            <input type="date" [(ngModel)]="searchObj.dateOfTravel" class="form-control" />
         </div>
         <div class="col-2 text-end">
             <button type="button" class="btn btn-primary btn-sm" (click)="getAllTrains()">Modify Search</button>
@@ -22,8 +22,8 @@
 </div>
 <div class="container-fluid pt-2">
     <p style="border: 1px solid;padding: 5px;margin-top: 5px;"><strong>{{trainsList.length}}</strong> Result Found For
-        <strong>Pune</strong>
-        to <strong>Nagpur</strong> on 12-12-2023</p>
+        <strong>karnataka</strong>
+        to <strong>bengaluru</strong> on 12-12-2023</p>
     <div class="row">
         <ng-container *ngIf="trainsList.length ==0">
             <div class="col-12">
@@ -68,7 +68,7 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h5 class="modal-title">Book Ticket</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal"></button> -->
             </div>
 
             <!-- Modal body -->
@@ -123,7 +123,8 @@
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                
+                <!-- <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button> -->
                 <button type="button" class="btn btn-success btn-sm"  (click)="BookTicket()">Book
                     Ticket</button>
             </div>
